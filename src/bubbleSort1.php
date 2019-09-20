@@ -3,14 +3,14 @@
 /**
  * Algorithm Series by EresDev.com
  *
- * Algorithm Name:
- * Time Complexity:
- * Space Complexity:
+ * Algorithm Name: Bubble Sort -  Implementation 1
+ * Time Complexity: O(n^2)
+ * Space Complexity: O(1)
  *
- * When to use:
- * When to not use:
+ * When to use: Almost never
+ * When to not use: Almost always
  *
- * Extra Information:
+ * Extra Information: A quick video to show you how it work https://www.youtube.com/watch?v=xli_FI7CuzA
  *
  */
 
@@ -34,7 +34,7 @@ function bubbleSort1($arr) : array
                 $temp = $arr[$j];
                 $arr[$j] = $arr[$j + 1];
                 $arr[$j + 1] = $temp;
-              }
+            }
     
         }
 		
