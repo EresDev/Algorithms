@@ -2,52 +2,52 @@
 
 namespace EresDev\Algorithms\Tests;
 
-use function EresDev\Algorithms\bubbleSort2;
+use function EresDev\Algorithms\selectionSort;
 use PHPUnit\Framework\TestCase;
 
-class BubbleSort2Test extends TestCase
+class SelectionSort1Test extends TestCase
 {
-    public function testBubbleSort2SmallSizeArray() : void
+    public function testSelectionSortSmallSizeArray() : void
     {
         $arr = [2,1];
 
-        $sortedArray = bubbleSort2($arr);
+        $sortedArray = selectionSort($arr);
 
         $this->assertEquals([1,2], $sortedArray);
     }
 
-    public function testBubbleSort2MediumSizeArray() : void
+    public function testSelectionSortMediumSizeArray() : void
     {
         $arr = [2,65,4,5,1,32,64,12];
 
-        $sortedArray = bubbleSort2($arr);
+        $sortedArray = selectionSort($arr);
 
         $this->assertEquals([1,2,4,5,12,32,64,65], $sortedArray);
     }
 
-    public function testBubbleSort2WithRepeatedItems() : void
+    public function testSelectionSortWithRepeatedItems() : void
     {
         $arr = [99,11,2,3,6,99,99,1,2];
 
-        $sortedArray = bubbleSort2($arr);
+        $sortedArray = selectionSort($arr);
 
         $this->assertEquals([1,2,2,3,6,11,99,99,99], $sortedArray);
     }
 
-    public function testBubbleSort2WithNegativeNumbers() : void
+    public function testSelectionSortWithNegativeNumbers() : void
     {
         $arr = [99,-11,2,3,6,-99,99,1,2];
 
-        $sortedArray = bubbleSort2($arr);
+        $sortedArray = selectionSort($arr);
 
         $this->assertEquals([-99,-11,1,2,2,3,6,99,99], $sortedArray);
     }
 
-    public function testBubbleSort2WithZero() : void
+    public function testSelectionSortWithZero() : void
     {
         $arr = [5,0,-1,2];
 
-        $sortedArray = bubbleSort2($arr);
+        $sortedArray = selectionSort($arr);
 
         $this->assertEquals([-1,0,2,5], $sortedArray);
     }
