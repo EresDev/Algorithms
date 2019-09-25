@@ -42,3 +42,25 @@ function bubbleSort1($arr) : array
 
     return $arr;
 }
+
+/**
+ * Same algorithm with array reference
+ */
+function bubbleSort1ByReference(&$arr) : void
+{
+    $arrLength = count($arr);
+
+    for ($i = $arrLength - 1; $i > 0; $i--) {
+
+        for ($j = 0; $j < $i; $j++) {
+
+            if ($arr[$j] > $arr[$j + 1]) {
+                $temp = $arr[$j];
+                $arr[$j] = $arr[$j + 1];
+                $arr[$j + 1] = $temp;
+            }
+
+        }
+
+    }
+}
