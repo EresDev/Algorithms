@@ -5,7 +5,7 @@
  *
  * Algorithm Name: Merge Sort
  * Time Complexity: O(n log(n))
- * Space Complexity: varies
+ * Space Complexity: O(n)
  *
  * When to use: It is preferred algorithm after Quick Sort. Merge sort guarantees O(n log n).
  *              While Quicksort is average case O(n log n), but has a worst case of O(n^2).
