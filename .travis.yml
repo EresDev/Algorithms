@@ -6,7 +6,7 @@ cache:
   directories:
     - "$HOME/.composer/cache/files"
 script:
-  - php vendor/bin/phpunit tests
+  - php vendor/bin/phpunit tests  --verbose
 install:
   - composer install
   - composer dump-autoload
