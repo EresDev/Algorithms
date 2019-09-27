@@ -27,26 +27,26 @@ function quickSort(array $arr) : array
     $low = 0;
     $high = count($arr) - 1;
 
-    doSort($arr, $low, $high);
+    partition($arr, $low, $high);
 
     return $arr;
 }
 
-function doSort(&$arr, int $left, int $right) : void
+function partition(&$arr, int $left, int $right) : void
 {
-    $pivotLocation = partition($arr, $left, $right);
+    $pivotLocation = arrange($arr, $left, $right);
 
     if ($left < $pivotLocation - 1) { // sort left half
-        doSort($arr, $left, $pivotLocation-1);
+        partition($arr, $left, $pivotLocation-1);
 
     }
 
     if ($pivotLocation < $right) { // sort right half
-        doSort($arr, $pivotLocation, $right);
+        partition($arr, $pivotLocation, $right);
     }
 }
 
-function partition(&$arr, $left, $right) : int
+function arrange(&$arr, $left, $right) : int
 {
     $pivot = $arr[ ($left + $right) / 2 ];
 
