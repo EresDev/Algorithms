@@ -6,6 +6,6 @@ cache:
   directories:
     - "$HOME/.composer/cache/files"
 script:
-  - php vendor/bin/phpunit
+  - php vendor/bin/phpunit tests
 install:
   - composer install
