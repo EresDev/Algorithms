@@ -9,3 +9,4 @@ script:
   - php vendor/bin/phpunit tests
 install:
   - composer install
+  - composer dump-autoload
