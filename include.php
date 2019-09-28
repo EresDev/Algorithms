@@ -1,7 +1,5 @@
 <?php
-echo "We are here!";
 $files = glob(__DIR__ . '/src/*.php');
-print_r($files);
 if ($files === false) {
     throw new RuntimeException("Failed to glob for function files");
 }
